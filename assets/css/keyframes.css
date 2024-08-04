@@ -1,0 +1,31 @@
+@keyframes wiggle {
+  0% {
+    transform: rotate(4deg);
+  }
+  25% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(16px);
+  }
+}
+
+.transition-up-down {
+  animation: up-down 1s infinite alternate;
+}

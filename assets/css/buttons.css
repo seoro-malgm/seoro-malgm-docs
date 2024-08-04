@@ -1,0 +1,26 @@
+@layer utilities {
+  .btn {
+    @apply w-full text-center rounded-lg  transition-all;
+    &.disabled {
+      @apply cursor-not-allowed opacity-50;
+    }
+  }
+}
+
+@layer components {
+  .btn-yellow {
+    @apply btn bg-yellow-400 hover:bg-yellow-500 focus:bg-yellow-500 active:bg-yellow-500 hover:text-white;
+  }
+
+  .btn-sub {
+    @apply btn bg-sub-300 hover:bg-sub-500 focus:bg-sub-500 active:bg-sub-500 hover:text-white;
+  }
+
+  .btn-green {
+    @apply btn bg-grayscale-200 hover:bg-green-500 focus:bg-green-500 active:bg-green-500 hover:text-white;
+  }
+
+  .btn-blue {
+    @apply btn bg-blue-400 hover:bg-blue-800 focus:bg-blue-800 active:bg-blue-800 hover:text-white;
+  }
+}

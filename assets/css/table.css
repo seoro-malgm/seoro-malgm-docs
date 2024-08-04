@@ -1,0 +1,36 @@
+.table {
+  @apply w-full;
+  thead {
+    tr {
+      th {
+        @apply bg-main-300 px-3 py-2;
+        &:first-child {
+          @apply rounded-s-lg;
+        }
+        &:last-child {
+          @apply rounded-e-lg;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        @apply border-b border-main-300;
+      }
+    }
+  }
+  tfoot {
+    tr {
+      td {
+        @apply px-3 pt-5 pb-2;
+        &:first-child {
+          @apply rounded-bl-lg;
+        }
+        &:last-child {
+          @apply rounded-br-lg;
+        }
+      }
+    }
+  }
+}
