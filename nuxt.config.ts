@@ -98,5 +98,15 @@ export default defineNuxtConfig({
   },
 
   // 배포환경
-  nitro: {},
+  nitro: {
+    compatibility: {
+      date: "2024-08-05",
+    },
+    storage: {
+      data: {
+        driver: "vercelKV",
+        /* Vercel KV driver options */
+      },
+    },
+  },
 });
