@@ -3,9 +3,11 @@ import seoData from "./data/seoData.js";
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: false },
+
   app: {
     ...seoData.head,
   },
+
   // router
   router: {
     options: {
@@ -15,7 +17,9 @@ export default defineNuxtConfig({
     },
     // middleware: ["auth"]
   },
+
   css: [],
+
   // modules
   modules: [
     "@nuxt/ui",
@@ -33,6 +37,7 @@ export default defineNuxtConfig({
     configPath: "@/tailwind.config.js",
     viewer: false,
   },
+
   // nuxt ui와 tailwind CSS 와 관련된 설정
   ui: {
     global: true,
@@ -47,6 +52,7 @@ export default defineNuxtConfig({
   plugins: [
     // ...
   ],
+
   // nuxt-iamge 설정
   image: {
     screens: {
@@ -82,12 +88,19 @@ export default defineNuxtConfig({
       },
     },
   },
+
   // 기본 컬러모드
   colorMode: {
     preference: "light",
   },
+
   // env
-  runtimeConfig: {},
+  runtimeConfig: {
+    public: {
+      SUPABASE_URL: process.env.SUPABASE_URL,
+      SUPABASE_KEY: process.env.SUPABASE_KEY,
+    },
+  },
 
   render: {
     cacheControl: {
@@ -109,4 +122,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: "2024-08-05",
 });
